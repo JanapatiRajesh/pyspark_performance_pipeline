@@ -1,3 +1,5 @@
+import utils.transport
+import utils.session
 import argparse, csv, random
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
