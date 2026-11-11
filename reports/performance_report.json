@@ -1,0 +1,29 @@
+{
+  "run_id": "f6c3e9a5-0275-47af-ac74-8c929ece8297",
+  "status": "SUCCESS",
+  "started_at": "2026-11-11T06:55:56.413670+00:00",
+  "ended_at": "2026-11-11T06:56:12.290547+00:00",
+  "source_files": [
+    "data/input/transactions.csv",
+    "data/input/customers.csv"
+  ],
+  "input_rows": 100020,
+  "accepted_rows": 99495,
+  "rejected_rows": 525,
+  "baseline_output_groups": 14981,
+  "optimized_output_groups": 14981,
+  "baseline_seconds": 2.364,
+  "optimized_seconds": 1.266,
+  "speedup_ratio": 1.867,
+  "outputs_equivalent": true,
+  "reconciliation": {
+    "input_equals_accepted_plus_rejected": true,
+    "baseline_equals_optimized": true,
+    "output_group_counts_match": true
+  },
+  "optimization": [
+    "repartition fact rows by customer_id",
+    "broadcast small customer dimension",
+    "write optimized output partitioned by city"
+  ]
+}

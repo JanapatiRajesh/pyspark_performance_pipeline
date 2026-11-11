@@ -6,3 +6,25 @@ data/output/
 reports/*
 !reports/.gitkeep
 *.log
+
+# Python environments
+.venv/
+.venv-*/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated Spark output
+data/output/
+*.crc
+_SUCCESS
+
+# Temporary error files
+run_error.txt
+
+# Generated failure report
+reports/failure_report.json
+!reports/performance_report.json
